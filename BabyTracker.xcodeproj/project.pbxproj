@@ -7,15 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C9566D86275F3F7E00116E98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566D85275F3F7E00116E98 /* AppDelegate.swift */; };
-		C9566D88275F3F7E00116E98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566D87275F3F7E00116E98 /* SceneDelegate.swift */; };
-		C9566D8A275F3F7E00116E98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566D89275F3F7E00116E98 /* ViewController.swift */; };
-		C9566D8D275F3F7E00116E98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9566D8B275F3F7E00116E98 /* Main.storyboard */; };
+		5722AF156C4098180822157B /* Pods_BabyTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985D7F79D5C4A25025FFC715 /* Pods_BabyTracker.framework */; };
+		A6390E6EEFBC142B5D2120B2 /* Pods_BabyTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D07BC52AB278C86DC5ACA9D /* Pods_BabyTrackerTests.framework */; };
+		C9566D8A275F3F7E00116E98 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566D89275F3F7E00116E98 /* HomeViewController.swift */; };
+		C9566D8D275F3F7E00116E98 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9566D8B275F3F7E00116E98 /* Home.storyboard */; };
 		C9566D8F275F3F7E00116E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9566D8E275F3F7E00116E98 /* Assets.xcassets */; };
 		C9566D92275F3F7E00116E98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9566D90275F3F7E00116E98 /* LaunchScreen.storyboard */; };
 		C9566D9D275F3F7E00116E98 /* BabyTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566D9C275F3F7E00116E98 /* BabyTrackerTests.swift */; };
 		C9566DA7275F3F7E00116E98 /* BabyTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566DA6275F3F7E00116E98 /* BabyTrackerUITests.swift */; };
 		C9566DA9275F3F7E00116E98 /* BabyTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566DA8275F3F7E00116E98 /* BabyTrackerUITestsLaunchTests.swift */; };
+		C9566DC6275F414900116E98 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9566DC5275F414900116E98 /* Settings.storyboard */; };
+		C9566DC8275F416200116E98 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566DC7275F416200116E98 /* AppCoordinator.swift */; };
+		C9566DCF275F41E100116E98 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566DCE275F41E100116E98 /* Storyboarded.swift */; };
+		C9566DD1275F424900116E98 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566DD0275F424900116E98 /* Coordinator.swift */; };
+		C9566DD3275F42E500116E98 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566DD2275F42E500116E98 /* HomeViewModel.swift */; };
+		C9566DD5275F433300116E98 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566DD4275F433300116E98 /* SettingsViewModel.swift */; };
+		C9566DD7275F435000116E98 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566DD6275F435000116E98 /* SettingsViewController.swift */; };
+		C9566DD9275F43AF00116E98 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566DD8275F43AF00116E98 /* SettingsCoordinator.swift */; };
+		C9566DDB275F456000116E98 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566DDA275F456000116E98 /* HomeCoordinator.swift */; };
+		C9566DDE275F45E500116E98 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566DDD275F45E500116E98 /* MainTabBarViewController.swift */; };
+		C9566DDF275F4B4D00116E98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566DBD275F40D200116E98 /* AppDelegate.swift */; };
+		C9566DE3275F4F8400116E98 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566DE2275F4F8400116E98 /* Category.swift */; };
+		C9566DE6275F70C400116E98 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566DE5275F70C400116E98 /* HomeCell.swift */; };
+		C9566DE9275F717200116E98 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9566DE8275F717200116E98 /* HomeCell.xib */; };
+		D91FAF1F8042D7325EBC67B3 /* Pods_BabyTracker_BabyTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1E3A62C7B57C2E5EE44924 /* Pods_BabyTracker_BabyTrackerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		071B752D12DE51F9F77A250C /* Pods-BabyTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-BabyTrackerTests/Pods-BabyTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		324C36F9F01BA75DB63D3DBE /* Pods-BabyTracker-BabyTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyTracker-BabyTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-BabyTracker-BabyTrackerUITests/Pods-BabyTracker-BabyTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		35F2DE413233C029E2E58961 /* Pods-BabyTracker-BabyTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyTracker-BabyTrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-BabyTracker-BabyTrackerUITests/Pods-BabyTracker-BabyTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4E1E3A62C7B57C2E5EE44924 /* Pods_BabyTracker_BabyTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyTracker_BabyTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B42F67A83F06A0B9AF93C1D /* Pods-BabyTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyTracker.debug.xcconfig"; path = "Target Support Files/Pods-BabyTracker/Pods-BabyTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		985D7F79D5C4A25025FFC715 /* Pods_BabyTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D07BC52AB278C86DC5ACA9D /* Pods_BabyTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9566D82275F3F7E00116E98 /* BabyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9566D85275F3F7E00116E98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C9566D87275F3F7E00116E98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C9566D89275F3F7E00116E98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C9566D8C275F3F7E00116E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9566D89275F3F7E00116E98 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C9566D8C275F3F7E00116E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		C9566D8E275F3F7E00116E98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9566D91275F3F7E00116E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9566D93275F3F7E00116E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +69,22 @@
 		C9566DA2275F3F7E00116E98 /* BabyTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9566DA6275F3F7E00116E98 /* BabyTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyTrackerUITests.swift; sourceTree = "<group>"; };
 		C9566DA8275F3F7E00116E98 /* BabyTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C9566DBD275F40D200116E98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9566DC5275F414900116E98 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		C9566DC7275F416200116E98 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		C9566DCE275F41E100116E98 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		C9566DD0275F424900116E98 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		C9566DD2275F42E500116E98 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C9566DD4275F433300116E98 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		C9566DD6275F435000116E98 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C9566DD8275F43AF00116E98 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		C9566DDA275F456000116E98 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		C9566DDD275F45E500116E98 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		C9566DE2275F4F8400116E98 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C9566DE5275F70C400116E98 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		C9566DE8275F717200116E98 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		DD299648A15E92557AE4D970 /* Pods-BabyTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-BabyTrackerTests/Pods-BabyTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		DF062D14E929C164EAC5158B /* Pods-BabyTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyTracker.release.xcconfig"; path = "Target Support Files/Pods-BabyTracker/Pods-BabyTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5722AF156C4098180822157B /* Pods_BabyTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6390E6EEFBC142B5D2120B2 /* Pods_BabyTrackerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +108,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D91FAF1F8042D7325EBC67B3 /* Pods_BabyTracker_BabyTrackerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3984BC01AE9E4A8E29B6EA06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				985D7F79D5C4A25025FFC715 /* Pods_BabyTracker.framework */,
+				4E1E3A62C7B57C2E5EE44924 /* Pods_BabyTracker_BabyTrackerUITests.framework */,
+				9D07BC52AB278C86DC5ACA9D /* Pods_BabyTrackerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C9566D79275F3F7E00116E98 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +132,8 @@
 				C9566D9B275F3F7E00116E98 /* BabyTrackerTests */,
 				C9566DA5275F3F7E00116E98 /* BabyTrackerUITests */,
 				C9566D83275F3F7E00116E98 /* Products */,
+				E4D67D1C2E2ADA37845234C2 /* Pods */,
+				3984BC01AE9E4A8E29B6EA06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +150,11 @@
 		C9566D84275F3F7E00116E98 /* BabyTracker */ = {
 			isa = PBXGroup;
 			children = (
-				C9566D85275F3F7E00116E98 /* AppDelegate.swift */,
-				C9566D87275F3F7E00116E98 /* SceneDelegate.swift */,
-				C9566D89275F3F7E00116E98 /* ViewController.swift */,
-				C9566D8B275F3F7E00116E98 /* Main.storyboard */,
-				C9566D8E275F3F7E00116E98 /* Assets.xcassets */,
-				C9566D90275F3F7E00116E98 /* LaunchScreen.storyboard */,
+				C9566DB9275F407E00116E98 /* App */,
+				C9566DB5275F404400116E98 /* Scenarios */,
+				C9566DB8275F407600116E98 /* Services */,
+				C9566DB7275F406E00116E98 /* Supporting Files */,
+				C9566DB6275F406000116E98 /* Resources */,
 				C9566D93275F3F7E00116E98 /* Info.plist */,
 			);
 			path = BabyTracker;
@@ -127,6 +177,200 @@
 			path = BabyTrackerUITests;
 			sourceTree = "<group>";
 		};
+		C9566DB5275F404400116E98 /* Scenarios */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DBE275F40EF00116E98 /* Settings */,
+				C9566DBC275F40C600116E98 /* Home */,
+			);
+			path = Scenarios;
+			sourceTree = "<group>";
+		};
+		C9566DB6275F406000116E98 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C9566D8E275F3F7E00116E98 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C9566DB7275F406E00116E98 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DC9275F418D00116E98 /* Storyboards */,
+				C9566DCA275F419F00116E98 /* TabBars */,
+				C9566DCB275F41A500116E98 /* Coordinators */,
+				C9566DCC275F41AA00116E98 /* Extensions */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9566DB8275F407600116E98 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C9566DB9275F407E00116E98 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DBD275F40D200116E98 /* AppDelegate.swift */,
+				C9566DC7275F416200116E98 /* AppCoordinator.swift */,
+				C9566D90275F3F7E00116E98 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C9566DBC275F40C600116E98 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C9566D8B275F3F7E00116E98 /* Home.storyboard */,
+				C9566DE1275F4F2000116E98 /* Models */,
+				C9566DE0275F4E5F00116E98 /* Cells */,
+				C9566DC1275F410E00116E98 /* Coordinators */,
+				C9566DC0275F410600116E98 /* ViewModels */,
+				C9566DBF275F40FE00116E98 /* ViewControllers */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C9566DBE275F40EF00116E98 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DC5275F414900116E98 /* Settings.storyboard */,
+				C9566DC4275F413400116E98 /* Coordinators */,
+				C9566DC3275F412F00116E98 /* ViewModels */,
+				C9566DC2275F412700116E98 /* ViewControllers */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C9566DBF275F40FE00116E98 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C9566D89275F3F7E00116E98 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C9566DC0275F410600116E98 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DD2275F42E500116E98 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C9566DC1275F410E00116E98 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DDA275F456000116E98 /* HomeCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		C9566DC2275F412700116E98 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DD6275F435000116E98 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C9566DC3275F412F00116E98 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DD4275F433300116E98 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C9566DC4275F413400116E98 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DD8275F43AF00116E98 /* SettingsCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		C9566DC9275F418D00116E98 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DCE275F41E100116E98 /* Storyboarded.swift */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C9566DCA275F419F00116E98 /* TabBars */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DDC275F45AA00116E98 /* ViewControllers */,
+			);
+			path = TabBars;
+			sourceTree = "<group>";
+		};
+		C9566DCB275F41A500116E98 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DD0275F424900116E98 /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		C9566DCC275F41AA00116E98 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C9566DDC275F45AA00116E98 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DDD275F45E500116E98 /* MainTabBarViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C9566DE0275F4E5F00116E98 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DE7275F715700116E98 /* TableView */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C9566DE1275F4F2000116E98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DE2275F4F8400116E98 /* Category.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C9566DE7275F715700116E98 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				C9566DE5275F70C400116E98 /* HomeCell.swift */,
+				C9566DE8275F717200116E98 /* HomeCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		E4D67D1C2E2ADA37845234C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B42F67A83F06A0B9AF93C1D /* Pods-BabyTracker.debug.xcconfig */,
+				DF062D14E929C164EAC5158B /* Pods-BabyTracker.release.xcconfig */,
+				324C36F9F01BA75DB63D3DBE /* Pods-BabyTracker-BabyTrackerUITests.debug.xcconfig */,
+				35F2DE413233C029E2E58961 /* Pods-BabyTracker-BabyTrackerUITests.release.xcconfig */,
+				071B752D12DE51F9F77A250C /* Pods-BabyTrackerTests.debug.xcconfig */,
+				DD299648A15E92557AE4D970 /* Pods-BabyTrackerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +378,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9566DAC275F3F7E00116E98 /* Build configuration list for PBXNativeTarget "BabyTracker" */;
 			buildPhases = (
+				FE9409BCD1BB2334C5C7AE28 /* [CP] Check Pods Manifest.lock */,
 				C9566D7E275F3F7E00116E98 /* Sources */,
 				C9566D7F275F3F7E00116E98 /* Frameworks */,
 				C9566D80275F3F7E00116E98 /* Resources */,
+				52BBDAF51A4968BF4F185A1E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,9 +397,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9566DAF275F3F7E00116E98 /* Build configuration list for PBXNativeTarget "BabyTrackerTests" */;
 			buildPhases = (
+				17AEFBC7F34359A43A0ADA6B /* [CP] Check Pods Manifest.lock */,
 				C9566D94275F3F7E00116E98 /* Sources */,
 				C9566D95275F3F7E00116E98 /* Frameworks */,
 				C9566D96275F3F7E00116E98 /* Resources */,
+				84FCED84F846A7E0865C9154 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,9 +417,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9566DB2275F3F7E00116E98 /* Build configuration list for PBXNativeTarget "BabyTrackerUITests" */;
 			buildPhases = (
+				A03D4B13390893D95ABB8BAF /* [CP] Check Pods Manifest.lock */,
 				C9566D9E275F3F7E00116E98 /* Sources */,
 				C9566D9F275F3F7E00116E98 /* Frameworks */,
 				C9566DA0275F3F7E00116E98 /* Resources */,
+				3D3241566CF74BF28411DEB2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,7 +483,9 @@
 			files = (
 				C9566D92275F3F7E00116E98 /* LaunchScreen.storyboard in Resources */,
 				C9566D8F275F3F7E00116E98 /* Assets.xcassets in Resources */,
-				C9566D8D275F3F7E00116E98 /* Main.storyboard in Resources */,
+				C9566D8D275F3F7E00116E98 /* Home.storyboard in Resources */,
+				C9566DC6275F414900116E98 /* Settings.storyboard in Resources */,
+				C9566DE9275F717200116E98 /* HomeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +505,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		17AEFBC7F34359A43A0ADA6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BabyTrackerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D3241566CF74BF28411DEB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BabyTracker-BabyTrackerUITests/Pods-BabyTracker-BabyTrackerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BabyTracker-BabyTrackerUITests/Pods-BabyTracker-BabyTrackerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BabyTracker-BabyTrackerUITests/Pods-BabyTracker-BabyTrackerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52BBDAF51A4968BF4F185A1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BabyTracker/Pods-BabyTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BabyTracker/Pods-BabyTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BabyTracker/Pods-BabyTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84FCED84F846A7E0865C9154 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BabyTrackerTests/Pods-BabyTrackerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BabyTrackerTests/Pods-BabyTrackerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BabyTrackerTests/Pods-BabyTrackerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A03D4B13390893D95ABB8BAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BabyTracker-BabyTrackerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE9409BCD1BB2334C5C7AE28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BabyTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C9566D7E275F3F7E00116E98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9566D8A275F3F7E00116E98 /* ViewController.swift in Sources */,
-				C9566D86275F3F7E00116E98 /* AppDelegate.swift in Sources */,
-				C9566D88275F3F7E00116E98 /* SceneDelegate.swift in Sources */,
+				C9566DDF275F4B4D00116E98 /* AppDelegate.swift in Sources */,
+				C9566DD1275F424900116E98 /* Coordinator.swift in Sources */,
+				C9566DE6275F70C400116E98 /* HomeCell.swift in Sources */,
+				C9566DD9275F43AF00116E98 /* SettingsCoordinator.swift in Sources */,
+				C9566DDB275F456000116E98 /* HomeCoordinator.swift in Sources */,
+				C9566DC8275F416200116E98 /* AppCoordinator.swift in Sources */,
+				C9566DD7275F435000116E98 /* SettingsViewController.swift in Sources */,
+				C9566DDE275F45E500116E98 /* MainTabBarViewController.swift in Sources */,
+				C9566D8A275F3F7E00116E98 /* HomeViewController.swift in Sources */,
+				C9566DD3275F42E500116E98 /* HomeViewModel.swift in Sources */,
+				C9566DCF275F41E100116E98 /* Storyboarded.swift in Sources */,
+				C9566DD5275F433300116E98 /* SettingsViewModel.swift in Sources */,
+				C9566DE3275F4F8400116E98 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +679,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C9566D8B275F3F7E00116E98 /* Main.storyboard */ = {
+		C9566D8B275F3F7E00116E98 /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C9566D8C275F3F7E00116E98 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		C9566D90275F3F7E00116E98 /* LaunchScreen.storyboard */ = {
@@ -434,6 +816,7 @@
 		};
 		C9566DAD275F3F7E00116E98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B42F67A83F06A0B9AF93C1D /* Pods-BabyTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -444,7 +827,7 @@
 				INFOPLIST_FILE = BabyTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -462,6 +845,7 @@
 		};
 		C9566DAE275F3F7E00116E98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF062D14E929C164EAC5158B /* Pods-BabyTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -472,7 +856,7 @@
 				INFOPLIST_FILE = BabyTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -490,6 +874,7 @@
 		};
 		C9566DB0275F3F7E00116E98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 071B752D12DE51F9F77A250C /* Pods-BabyTrackerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +900,7 @@
 		};
 		C9566DB1275F3F7E00116E98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD299648A15E92557AE4D970 /* Pods-BabyTrackerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +926,7 @@
 		};
 		C9566DB3275F3F7E00116E98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 324C36F9F01BA75DB63D3DBE /* Pods-BabyTracker-BabyTrackerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -563,6 +950,7 @@
 		};
 		C9566DB4275F3F7E00116E98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35F2DE413233C029E2E58961 /* Pods-BabyTracker-BabyTrackerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
