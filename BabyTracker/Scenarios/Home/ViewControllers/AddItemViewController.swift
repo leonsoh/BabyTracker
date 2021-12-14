@@ -8,22 +8,14 @@
 import UIKit
 import RxSwift
 
-final class AddItemViewController: UIViewController {
+final class AddItemViewController: UIViewController, Storyboarded {
     
-    private let category: Category
+    // MARK: - Outlets
+    @IBOutlet weak var timeTextField: UITextField!
+    @IBOutlet weak var amountTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    init(item: Category) {
-        self.category = item
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
 
 }

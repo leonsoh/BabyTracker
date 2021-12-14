@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Differentiator
 
 final class HomeCoordinator : Coordinator {
     
@@ -31,7 +32,15 @@ final class HomeCoordinator : Coordinator {
     }
     
     private func displayAddItemView(item: Category) {
-        print("//Display AddItemViewController//")
+        let viewController = AddItemViewController.navigateToAddItemViewController()
+        
+        
+        DispatchQueue.main.async {
+            viewController.timeTextField.text = item.duration
+            viewController.amountTextField.text = item.note
+        }
+        
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
 

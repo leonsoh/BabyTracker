@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxDataSources
 
 class HomeViewController: UIViewController, Storyboarded {
     
@@ -19,6 +20,16 @@ class HomeViewController: UIViewController, Storyboarded {
     private var disposeBag = DisposeBag()
     private let viewModel = HomeViewModel()
     weak var delegate: HomeViewControllerDelegate?
+    
+    private lazy var dataSource = RxTableViewSectionedReloadDataSource<SectionOfCategory>(configureCell: configureCell)
+    private lazy var configureCell: RxTableViewSectionedReloadDataSource<SectionOfCategory>.ConfigureCell = {
+        [unowned self] (dataSource, tableView, indexPath, item) in
+        
+        switch item {
+        case.category(let category):
+            return self.configureHomeCell(category: category, atIndex: indexPath)
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -40,27 +51,28 @@ class HomeViewController: UIViewController, Storyboarded {
             cell.model = model
         }.disposed(by: disposeBag)
         
+        // didSelectRowAtIndex for tableView
         tableView.rx.modelSelected(Category.self).withUnretained(self).bind { owner, item in
             owner.delegate?.displaySelectedItem(item: item)
         }.disposed(by: self.disposeBag)
-        
-        
+
+        tableView.rx.itemSelected.withUnretained(self).bind { owner, indexPath in owner.tableView.deselectRow(at: indexPath, animated: true) }.disposed(by: disposeBag)
         
         // fetch items
         viewModel.fetchItems()
+        
     }
     
     private func setupData() {
         tableView.register(cellType: HomeCell.self)
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
+        
     }
     
     private func setupUI() {
         
     }
     
-    
-
 }
 
 
@@ -68,8 +80,6 @@ class HomeViewController: UIViewController, Storyboarded {
 protocol HomeViewControllerDelegate: AnyObject {
     func displaySelectedItem(item: Category)
 }
-
-
 
 
 // MARK: - UITableViewDelegate
@@ -83,13 +93,28 @@ extension HomeViewController: UITableViewDelegate {
         let addAction = UIContextualAction(style: .normal, title: "Add Item") {
             (action, sourceView, completionHandler) in
             
+//            self.delegate?.displaySelectedItem(item: category)
+             
             
             completionHandler(true)
             
         }
         
-        let swipeActions = UISwipeActionsConfiguration(actions: [addAction])
+        let swipeActionsConfiguration = UISwipeActionsConfiguration(actions: [addAction])
+        swipeActionsConfiguration.performsFirstActionWithFullSwipe = false
         
-        return swipeActions
+        return swipeActionsConfiguration
+    }
+}
+
+
+extension HomeViewController {
+    func configureHomeCell(category: Category, atIndex: IndexPath) -> UITableViewCell {
+        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: HomeCell.reuseIdentifier, for: atIndex) as? HomeCell else {
+            return UITableViewCell()
+        }
+        cell.model = category
+        
+        return cell
     }
 }
