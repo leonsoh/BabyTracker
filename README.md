@@ -17,3 +17,6 @@ Reactive Programming
 Created this app for me to familiarize the usage of MVVM+C with RxSwift.
 :slightly_smiling_face:
 
+* UITableView
+* UITabBarController
+
