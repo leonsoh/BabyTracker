@@ -13,7 +13,7 @@ final class HomeCoordinator : Coordinator {
     // MARK: - Properties
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
@@ -33,12 +33,7 @@ final class HomeCoordinator : Coordinator {
     
     private func displayAddItemView(item: Category) {
         let viewController = AddItemViewController.navigateToAddItemViewController()
-        
-        
-        DispatchQueue.main.async {
-            viewController.timeTextField.text = item.duration
-            viewController.amountTextField.text = item.note
-        }
+        viewController.category = item
         
         navigationController.pushViewController(viewController, animated: true)
     }

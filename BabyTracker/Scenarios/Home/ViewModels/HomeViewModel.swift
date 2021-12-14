@@ -25,7 +25,6 @@ struct HomeViewModel {
     
     // MARK: - Properties
     var items = PublishSubject<[Category]>()
-    private var disposeBag = DisposeBag()
     
     let categories = [
         Category(imageName: "face.smiling", duration: "59 mins ago", note: "formula 90ml", frequency: "5 times"),

@@ -58,7 +58,7 @@ class HomeViewController: UIViewController, Storyboarded {
 
         tableView.rx.itemSelected.withUnretained(self).bind { owner, indexPath in owner.tableView.deselectRow(at: indexPath, animated: true) }.disposed(by: disposeBag)
         
-        // fetch items
+        // fetch items or data from API
         viewModel.fetchItems()
         
     }
@@ -93,8 +93,9 @@ extension HomeViewController: UITableViewDelegate {
         let addAction = UIContextualAction(style: .normal, title: "Add Item") {
             (action, sourceView, completionHandler) in
             
-//            self.delegate?.displaySelectedItem(item: category)
-             
+            let selectedCategory = self.viewModel.categories[indexPath.row]
+            
+            self.delegate?.displaySelectedItem(item: selectedCategory)
             
             completionHandler(true)
             
