@@ -15,6 +15,7 @@ final class HomeCell: UITableViewCell, NibReusable {
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var frequencyLabel: UILabel!
+    @IBOutlet weak var swipeActionsView: UIView!
     
     
     var model: Category? {
@@ -35,7 +36,13 @@ final class HomeCell: UITableViewCell, NibReusable {
         super.awakeFromNib()
         
         selectionStyle = .none
+        setupUI()
         
+    }
+    
+    private func setupUI() {
+        swipeActionsView.layer.cornerRadius = 2.5
+        swipeActionsView.backgroundColor = .systemBlue
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

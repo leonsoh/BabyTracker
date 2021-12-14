@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,28 +27,36 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LVR-l4-RtE">
-                                <rect key="frame" x="75" y="21.5" width="356" height="75"/>
+                                <rect key="frame" x="75" y="21.5" width="326" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y1-ZM-enz">
-                                        <rect key="frame" x="0.0" y="0.0" width="356" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="326" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCv-Qu-jcS">
-                                        <rect key="frame" x="0.0" y="29" width="356" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="29" width="326" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVt-o0-XCN">
-                                        <rect key="frame" x="0.0" y="54.5" width="356" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="54.5" width="326" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7h-fP-Vxc">
+                                <rect key="frame" x="426" y="39" width="5" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="5" id="4Yx-x3-99V"/>
+                                    <constraint firstAttribute="height" constant="40" id="N70-zE-zoD"/>
+                                </constraints>
+                            </view>
                         </subviews>
                     </stackView>
                 </subviews>
@@ -63,8 +72,14 @@
                 <outlet property="durationLabel" destination="4y1-ZM-enz" id="9dc-za-BlD"/>
                 <outlet property="frequencyLabel" destination="ZVt-o0-XCN" id="Wrt-wr-JH0"/>
                 <outlet property="noteLabel" destination="QCv-Qu-jcS" id="OQi-7y-Gvz"/>
+                <outlet property="swipeActionsView" destination="f7h-fP-Vxc" id="FwL-6r-cz1"/>
             </connections>
             <point key="canvasLocation" x="110.86956521739131" y="-153.34821428571428"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
