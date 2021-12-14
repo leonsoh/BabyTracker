@@ -12,7 +12,10 @@ final class HomeCell: UITableViewCell, NibReusable {
     
     // MARK: - Outlets
     @IBOutlet weak var categoryIcon: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var noteLabel: UILabel!
+    @IBOutlet weak var frequencyLabel: UILabel!
+    
     
     var model: Category? {
         didSet {
@@ -21,7 +24,9 @@ final class HomeCell: UITableViewCell, NibReusable {
             }
             
             categoryIcon.image = UIImage(systemName: model.imageName)
-            titleLabel.text = model.title
+            durationLabel.text = model.duration
+            noteLabel.text = model.note
+            frequencyLabel.text = model.frequency
             
         }
     }
@@ -30,11 +35,11 @@ final class HomeCell: UITableViewCell, NibReusable {
         super.awakeFromNib()
         
         selectionStyle = .none
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 

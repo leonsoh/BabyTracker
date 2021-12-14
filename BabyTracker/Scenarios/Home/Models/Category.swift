@@ -7,7 +7,10 @@
 
 import Foundation
 
-struct Category {
+struct Category: Codable {
     let imageName: String
-    let title: String
+    let duration: String
+    let note: String
+    let frequency: String
 }
+

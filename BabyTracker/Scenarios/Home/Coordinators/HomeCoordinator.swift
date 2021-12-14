@@ -10,7 +10,6 @@ import UIKit
 final class HomeCoordinator : Coordinator {
     
     // MARK: - Properties
-    
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
 
@@ -19,9 +18,9 @@ final class HomeCoordinator : Coordinator {
     }
     
     // MARK: - Coordinator
-    
     func start() {
         let viewController = HomeViewController.instantiate()
+        viewController.delegate = self
         setupUI(viewController: viewController)
         
         navigationController.pushViewController(viewController, animated: false)
@@ -30,4 +29,19 @@ final class HomeCoordinator : Coordinator {
     func setupUI(viewController: UIViewController) {
         viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
     }
+    
+    private func displayAddItemView(item: Category) {
+        print("//Display AddItemViewController//")
+    }
 }
+
+
+// MARK: - Delegates
+extension HomeCoordinator: HomeViewControllerDelegate {
+    
+    func displaySelectedItem(item: Category) {
+        displayAddItemView(item: item)
+    }
+    
+}
+
