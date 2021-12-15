@@ -28,12 +28,18 @@ final class HomeCoordinator : Coordinator {
     }
     
     func setupUI(viewController: UIViewController) {
-        viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        
+        if viewController.isKind(of: HomeViewController.self) {
+            viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        } else {
+            viewController.navigationItem.setRightBarButton(UIBarButtonItem(systemItem: .add, primaryAction: .none, menu: nil), animated: false)
+        }
     }
     
     private func displayAddItemView(item: Category) {
         let viewController = AddItemViewController.navigateToAddItemViewController()
         viewController.category = item
+        setupUI(viewController: viewController)
         
         navigationController.pushViewController(viewController, animated: true)
     }
