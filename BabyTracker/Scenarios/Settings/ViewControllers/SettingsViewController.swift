@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import SnapKit
 
 final class SettingsViewController: UIViewController, Storyboarded {
     
     // MARK: - Outlets
+    lazy var label = UILabel()
     
-    
-    
+
     // MARK: - Properties
     
     var viewModel: SettingsViewModel!
@@ -21,7 +22,11 @@ final class SettingsViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.view.addSubview(label)
+        label.text = "Settings"
+        label.snp.makeConstraints { make in
+            make.center.equalTo(self.view)
+        }
     }
     
 
