@@ -21,4 +21,5 @@ Created this app for me to familiarize the usage of MVVM+C with RxSwift.
 
 * UITableView
 * UITabBarController
+* Core Data
 
