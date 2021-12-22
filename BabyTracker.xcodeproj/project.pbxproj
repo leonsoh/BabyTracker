@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5722AF156C4098180822157B /* Pods_BabyTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985D7F79D5C4A25025FFC715 /* Pods_BabyTracker.framework */; };
 		A6390E6EEFBC142B5D2120B2 /* Pods_BabyTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D07BC52AB278C86DC5ACA9D /* Pods_BabyTrackerTests.framework */; };
 		C91D2989276847960096C8B9 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D2988276847960096C8B9 /* AddItemViewController.swift */; };
+		C91D298C2771B8600096C8B9 /* CoreDataObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D298B2771B8600096C8B9 /* CoreDataObservable.swift */; };
+		C91D298D2772D1BC0096C8B9 /* Pods_BabyTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985D7F79D5C4A25025FFC715 /* Pods_BabyTracker.framework */; };
+		C91D29912772D47A0096C8B9 /* DetailsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D29902772D47A0096C8B9 /* DetailsListViewController.swift */; };
+		C91D29942772D5AB0096C8B9 /* DetailsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D29922772D5AB0096C8B9 /* DetailsListTableViewCell.swift */; };
+		C91D29952772D5AB0096C8B9 /* DetailsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91D29932772D5AB0096C8B9 /* DetailsListTableViewCell.xib */; };
 		C9566D8A275F3F7E00116E98 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9566D89275F3F7E00116E98 /* HomeViewController.swift */; };
 		C9566D8D275F3F7E00116E98 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9566D8B275F3F7E00116E98 /* Home.storyboard */; };
 		C9566D8F275F3F7E00116E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9566D8E275F3F7E00116E98 /* Assets.xcassets */; };
@@ -63,6 +67,10 @@
 		985D7F79D5C4A25025FFC715 /* Pods_BabyTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D07BC52AB278C86DC5ACA9D /* Pods_BabyTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C91D2988276847960096C8B9 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		C91D298B2771B8600096C8B9 /* CoreDataObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataObservable.swift; sourceTree = "<group>"; };
+		C91D29902772D47A0096C8B9 /* DetailsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsListViewController.swift; sourceTree = "<group>"; };
+		C91D29922772D5AB0096C8B9 /* DetailsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsListTableViewCell.swift; sourceTree = "<group>"; };
+		C91D29932772D5AB0096C8B9 /* DetailsListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsListTableViewCell.xib; sourceTree = "<group>"; };
 		C9566D82275F3F7E00116E98 /* BabyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9566D89275F3F7E00116E98 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C9566D8C275F3F7E00116E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
@@ -100,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5722AF156C4098180822157B /* Pods_BabyTracker.framework in Frameworks */,
+				C91D298D2772D1BC0096C8B9 /* Pods_BabyTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +139,14 @@
 				9D07BC52AB278C86DC5ACA9D /* Pods_BabyTrackerTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C91D298A2771B8460096C8B9 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C91D298B2771B8600096C8B9 /* CoreDataObservable.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		C9566D79275F3F7E00116E98 = {
@@ -205,6 +221,7 @@
 		C9566DB7275F406E00116E98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C91D298A2771B8460096C8B9 /* CoreData */,
 				C9566DC9275F418D00116E98 /* Storyboards */,
 				C9566DCA275F419F00116E98 /* TabBars */,
 				C9566DCB275F41A500116E98 /* Coordinators */,
@@ -260,6 +277,7 @@
 			children = (
 				C9566D89275F3F7E00116E98 /* HomeViewController.swift */,
 				C91D2988276847960096C8B9 /* AddItemViewController.swift */,
+				C91D29902772D47A0096C8B9 /* DetailsListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -366,6 +384,8 @@
 			children = (
 				C9566DE5275F70C400116E98 /* HomeCell.swift */,
 				C9566DE8275F717200116E98 /* HomeCell.xib */,
+				C91D29922772D5AB0096C8B9 /* DetailsListTableViewCell.swift */,
+				C91D29932772D5AB0096C8B9 /* DetailsListTableViewCell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -501,6 +521,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91D29952772D5AB0096C8B9 /* DetailsListTableViewCell.xib in Resources */,
 				C9566D92275F3F7E00116E98 /* LaunchScreen.storyboard in Resources */,
 				C9566D8F275F3F7E00116E98 /* Assets.xcassets in Resources */,
 				C9566D8D275F3F7E00116E98 /* Home.storyboard in Resources */,
@@ -651,9 +672,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91D2989276847960096C8B9 /* AddItemViewController.swift in Sources */,
+				C91D298C2771B8600096C8B9 /* CoreDataObservable.swift in Sources */,
 				C9566DF627674AA400116E98 /* CDCategory.swift in Sources */,
 				C9566DDF275F4B4D00116E98 /* AppDelegate.swift in Sources */,
 				C9566DD1275F424900116E98 /* Coordinator.swift in Sources */,
+				C91D29912772D47A0096C8B9 /* DetailsListViewController.swift in Sources */,
 				C9566DF32767384000116E98 /* CategoryDataAccessProvider.swift in Sources */,
 				C9566DE6275F70C400116E98 /* HomeCell.swift in Sources */,
 				C9566DD9275F43AF00116E98 /* SettingsCoordinator.swift in Sources */,
@@ -666,6 +689,7 @@
 				C9566DD3275F42E500116E98 /* HomeViewModel.swift in Sources */,
 				C9566DCF275F41E100116E98 /* Storyboarded.swift in Sources */,
 				C9566DD5275F433300116E98 /* SettingsViewModel.swift in Sources */,
+				C91D29942772D5AB0096C8B9 /* DetailsListTableViewCell.swift in Sources */,
 				C9566DE3275F4F8400116E98 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import CoreData
 
 class HomeViewController: UIViewController, Storyboarded {
     
@@ -18,7 +19,7 @@ class HomeViewController: UIViewController, Storyboarded {
     // MARK: - Properties
     weak var coordinator: AppCoordinator?
     private var disposeBag = DisposeBag()
-    private let viewModel = HomeViewModel()
+    private var viewModel = HomeViewModel()
     weak var delegate: HomeViewControllerDelegate?
     
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<SectionOfCategory>(configureCell: configureCell)
@@ -38,6 +39,12 @@ class HomeViewController: UIViewController, Storyboarded {
         setupBinding()
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.fetchCoreData()
+    }
+    
     
     // MARK: - Setups
     private func setupBinding() {
@@ -78,7 +85,9 @@ class HomeViewController: UIViewController, Storyboarded {
 
 // MARK: - Protocols
 protocol HomeViewControllerDelegate: AnyObject {
+//    func displaySelectedItem(item: Category)
     func displaySelectedItem(item: Category)
+    func addSelectedItem(item: Category)
 }
 
 
@@ -86,7 +95,7 @@ protocol HomeViewControllerDelegate: AnyObject {
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 120
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -94,8 +103,7 @@ extension HomeViewController: UITableViewDelegate {
             (action, sourceView, completionHandler) in
             
             let selectedCategory = self.viewModel.categories[indexPath.row]
-            
-            self.delegate?.displaySelectedItem(item: selectedCategory)
+            self.delegate?.addSelectedItem(item: selectedCategory)
             
             completionHandler(true)
             
@@ -114,7 +122,7 @@ extension HomeViewController {
         guard let cell = self.tableView.dequeueReusableCell(withIdentifier: HomeCell.reuseIdentifier, for: atIndex) as? HomeCell else {
             return UITableViewCell()
         }
-        cell.model = category
+//        cell.model = category
         
         return cell
     }

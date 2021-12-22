@@ -25,13 +25,11 @@ struct HomeViewModel {
     
     // MARK: - Properties
     var items = PublishSubject<[Category]>()
-    
-    let categories = [
-        Category(imageName: "face.smiling", duration: "59 mins ago", note: "formula 90ml", frequency: "5 times"),
-        Category(imageName: "bed.double.circle", duration: "11 mins ago", note: "formula 120ml", frequency: "6 times"),
-        Category(imageName: "person.circle", duration: "29 mins ago", note: "formula 30ml", frequency: "8 times"),
-        Category(imageName: "theatermasks.circle", duration: "2 hours ago", note: "formula 90ml", frequency: "8 times"),
-        Category(imageName: "fork.knife.circle", duration: "3 hours ago", note: "formula 60ml", frequency: "7 times")
+   
+    var categories = [
+        Category(imageName: "fork.knife.circle", duration: "3 hours ago", note: "Feeding", frequency: "0 times"),
+        Category(imageName: "face.smiling", duration: "59 mins ago", note: "Diaper changing", frequency: "0 times"),
+        Category(imageName: "bed.double.circle", duration: "11 mins ago", note: "Sleeping", frequency: "0 times"),
     ]
     
     // MARK: - Functions
@@ -40,5 +38,29 @@ struct HomeViewModel {
         items.onNext(categories)
         items.onCompleted()
     }
+    
+    func fetchCoreData() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let foodFetchRequest: NSFetchRequest<Food> = Food.fetchRequest()
+        let diaperFetchRequest: NSFetchRequest<Diaper> = Diaper.fetchRequest()
+        let sleepFetchRequest: NSFetchRequest<Sleep> = Sleep.fetchRequest()
         
+
+        appDelegate.persistentContainer.viewContext.perform {
+            do {
+                // Execute Fetch Request
+                let foodResult = try foodFetchRequest.execute()
+                let diaperResult = try diaperFetchRequest.execute()
+                let sleepResult = try sleepFetchRequest.execute()
+                
+                print("Food item count:\(foodResult.count)")
+                print("Diaper item count:\(diaperResult.count)")
+                print("Sleep item count:\(sleepResult.count)")
+            } catch {
+                print("Unable to Execute Fetch Request, \(error)")
+            }
+        }
+        
+    }
+
 }

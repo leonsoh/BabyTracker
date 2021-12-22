@@ -18,8 +18,8 @@ final class HomeCell: UITableViewCell, NibReusable {
     lazy var frequencyLabel = UILabel()
     lazy var swipeActionsView = UIView()
     
-    
-    var model: Category? {
+
+    var model: Category? { //Change to Food?
         didSet {
             guard let model = model else {
                 return
@@ -32,7 +32,7 @@ final class HomeCell: UITableViewCell, NibReusable {
             
         }
     }
-
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         

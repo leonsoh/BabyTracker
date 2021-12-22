@@ -28,12 +28,8 @@ final class HomeCoordinator : Coordinator {
     }
     
     func setupUI(viewController: UIViewController) {
+        viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
         
-        if viewController.isKind(of: HomeViewController.self) {
-            viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
-        } else {
-            viewController.navigationItem.setRightBarButton(UIBarButtonItem(systemItem: .add, primaryAction: .none, menu: nil), animated: false)
-        }
     }
     
     private func displayAddItemView(item: Category) {
@@ -43,14 +39,23 @@ final class HomeCoordinator : Coordinator {
         
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    private func displayDetailsListViewController(item: Category) {
+        let viewController = DetailsListViewController.navigateToDetailsListViewController()
+        viewController.category = item
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
 
 
 // MARK: - Delegates
 extension HomeCoordinator: HomeViewControllerDelegate {
-    
-    func displaySelectedItem(item: Category) {
+    func addSelectedItem(item: Category) {
         displayAddItemView(item: item)
+    }
+    func displaySelectedItem(item: Category) {
+        displayDetailsListViewController(item: item)
     }
     
 }

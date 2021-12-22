@@ -11,6 +11,7 @@ import UIKit
 protocol Storyboarded {
     static func instantiate() -> Self
     static func navigateToAddItemViewController() -> Self
+    static func navigateToDetailsListViewController() -> Self
 }
 
 extension Storyboarded where Self: UIViewController {
@@ -30,4 +31,12 @@ extension Storyboarded where Self: UIViewController {
         return storyboard.instantiateViewController(withIdentifier: id) as! Self
         
     }
+    
+    static func navigateToDetailsListViewController() -> Self {
+        let id = "DetailsListViewController"
+        let storyboard = UIStoryboard(name: "Home", bundle: Bundle.main)
+        
+        return storyboard.instantiateViewController(withIdentifier: id) as! Self
+    }
+    
 }
