@@ -22,20 +22,13 @@ final class HomeCoordinator : Coordinator {
     func start() {
         let viewController = HomeViewController.instantiate()
         viewController.delegate = self
-        setupUI(viewController: viewController)
         
         navigationController.pushViewController(viewController, animated: false)
     }
-    
-    func setupUI(viewController: UIViewController) {
-        viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
-        
-    }
-    
+
     private func displayAddItemView(item: Category) {
         let viewController = AddItemViewController.navigateToAddItemViewController()
         viewController.category = item
-        setupUI(viewController: viewController)
         
         navigationController.pushViewController(viewController, animated: true)
     }

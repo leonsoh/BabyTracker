@@ -11,20 +11,21 @@ import UIKit
 final class AppCoordinator: Coordinator {
     
     // MARK: - Properties
-    
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
+    private var window: UIWindow
     
-    init(navigationController: UINavigationController) {
+    init(window: UIWindow, navigationController: UINavigationController) {
+        self.window = window
         self.navigationController = navigationController
     }
     
-    /**
-        Display home view when app starts
-     */
-    
     func start() {
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController)
+        childCoordinators.append(homeCoordinator)
         
+        window.rootViewController = MainTabBarViewController()
+        window.makeKeyAndVisible()
     }
 
 }

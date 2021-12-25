@@ -37,6 +37,7 @@ class HomeViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         setupData()
         setupBinding()
+        setupUI()
         
     }
     
@@ -77,7 +78,9 @@ class HomeViewController: UIViewController, Storyboarded {
     }
     
     private func setupUI() {
-        
+        navigationItem.title = "Home"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
     }
     
 }
