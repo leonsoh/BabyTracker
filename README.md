@@ -1,6 +1,11 @@
+# Baby Tracker
+
+User is able to add, edit and delete records for tracking baby's needs. <br>
+Data is stored locally using Core Data.
+
 # Architecture
 
-MVVM + Coordinators
+MVVM + Coordinators layer
 
 # Programming Paradigm
 
